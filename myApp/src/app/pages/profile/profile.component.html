@@ -1,0 +1,27 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+    
+      <th scope="col">LicenceNumber</th>
+      <th scope="col">FName</th>
+      <th scope="col">MName</th>
+      <th scope="col">LName</th>
+      <th scope="col">CarPlateNumber</th>
+      <th scope="col">CasesName</th>
+      <th scope="col">CourtName</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let list of driverList">
+     
+      <td>{{list.LicenceNumber}}</td>
+      <td>{{list.FName}}</td>
+      <td>{{list.MName}}</td>
+      <td>{{list.LName}}</td>
+      <td>{{list.CasesName}}</td>
+      <td>{{list.CarPlateNumber}}</td>
+      <td>{{list.CourtName}}</td>
+    </tr>
+    
+  </tbody>
+</table>
