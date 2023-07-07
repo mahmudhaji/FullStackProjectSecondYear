@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @CrossOrigin("*")
@@ -22,4 +23,17 @@ public class DriverController {
     public List<Driver> getAll(){
         return driverServices.getAll();
     }
+    @GetMapping("/{LicenceNumber}")
+    public Optional<Driver> getDriverById(@PathVariable Integer LicenceNumber){
+        return driverServices.getDriverById(LicenceNumber);
+    } @DeleteMapping("/{LicenceNumber}")
+    public void deleteDriver(@PathVariable Integer LicenceNumber){
+        driverServices.deleteDriver(LicenceNumber);
+    }
+
+//    @PutMapping("/{licenceNumber}")
+//    public void updateDriver(@PathVariable Integer licenceNumber, @RequestBody Driver updatedDriver) {
+//        driverServices.updateDriver(licenceNumber, updatedDriver);
+//    }
+
 }

@@ -25,6 +25,9 @@ import {MatTableModule} from '@angular/material/table';
 import {MatSelectModule} from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
 import {NgIf, NgFor} from '@angular/common';
+import {MatDividerModule} from '@angular/material/divider';
+import { UpdateComponent } from './pages/update/update.component';
+import { LoginComponent } from './pages/login/login.component';
 
 
 @NgModule({
@@ -35,7 +38,9 @@ import {NgIf, NgFor} from '@angular/common';
     ProfileComponent,
     LogoutComponent,
     CasesComponent,
-    CourtComponent
+    CourtComponent,
+    UpdateComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -56,9 +61,9 @@ import {NgIf, NgFor} from '@angular/common';
     MatSelectModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgIf, NgFor
+    NgIf, NgFor,
+    MatDividerModule
 
-    
   ],
   providers: [],
   bootstrap: [AppComponent]

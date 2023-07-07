@@ -14,13 +14,20 @@
   <tbody>
     <tr *ngFor="let list of driverList">
      
-      <td>{{list.LicenceNumber}}</td>
-      <td>{{list.FName}}</td>
-      <td>{{list.MName}}</td>
-      <td>{{list.LName}}</td>
-      <td>{{list.CasesName}}</td>
-      <td>{{list.CarPlateNumber}}</td>
-      <td>{{list.CourtName}}</td>
+      <td>{{list.licenceNumber}}</td>
+      <td>{{list.fname}}</td>
+      <td>{{list.mname}}</td>
+      <td>{{list.lname}}</td>
+      <td>{{list.casesname}}</td>
+      <td>{{list.carplatenumber}}</td>
+      <td>{{list.courtname}}</td>
+     
+      <button mat-fab color="primary" aria-label="Example icon button with a edit icon" (click)="edit(list)">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="delete(list.licenceNumber)">
+        <mat-icon>delete</mat-icon>
+      </button>
     </tr>
     
   </tbody>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DriverService } from 'src/app/services/driver.service';
 
 @Component({
@@ -11,8 +12,8 @@ export class ProfileComponent implements OnInit{
   ngOnInit(): void {
     this.fetchAllDriver()
   }
-
-    constructor(private ds:DriverService){
+                        // service name
+    constructor(private ds:DriverService,private route:Router){
 
     }
 
@@ -22,5 +23,13 @@ export class ProfileComponent implements OnInit{
           this.driverList=response
       })
     }
-
+    //fuction for delete
+    delete(list:any){
+      this.ds.deleteById(list).subscribe(response=>{
+        this.fetchAllDriver()
+      })
+    }
+    edit(list:any){
+      this.route.navigateByUrl("update/"+list.licenceNumber)
+    }
 }

@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DriverService {
+  // variable for api link
   private api = String ("http://localhost:8080/api/v1/driver")
 
   constructor(private Http:HttpClient) { }
@@ -18,10 +19,15 @@ export class DriverService {
       return this.Http.get(this.api)
 
     }
-    getById(){
-
+    getById(LicenceNumber:any){
+      const url=`${this.api}/${LicenceNumber}`
+      return this.Http.get(url)
     }
     update(){
 
+    }
+    deleteById(LicenceNumber:any){
+      const url=`${this.api}/${LicenceNumber}`
+      return this.Http.delete(url)
     }
 }

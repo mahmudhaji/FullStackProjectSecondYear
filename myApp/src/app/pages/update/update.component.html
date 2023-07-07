@@ -1,5 +1,5 @@
 
-<form class="example-form" [formGroup]="addform">
+<form class="example-form" [formGroup]="updateform">
     <div class="row">
         <div class="col-md-6">
             <mat-form-field class="w-100 example-full-width" appearance="outline">
@@ -76,5 +76,5 @@
               </mat-form-field>
         </div> -->
     </div>
-                <button mat-raised-button color="accent" [disabled]="addform.invalid" (click)="onsave()">save</button>
+                <button mat-raised-button color="accent" [disabled]="updateform.invalid" (click)="onsave()">save</button>
 </form>  

@@ -3,12 +3,15 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
+      
+  <mat-toolbar></mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="">dashboard</a>
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home" w="40"></mat-icon>
+      <a mat-list-item routerLink="mainlayout">dashboard</a>
       <a mat-list-item routerLink="profile">profile</a>
       <a mat-list-item routerLink="Cases">Cases</a>
       <a mat-list-item routerLink="Court">Court</a>
+      <a mat-list-item routerLink="#Bin">Trash</a>
       <a mat-list-item routerLink="logout">logout</a>
     </mat-nav-list>
   </mat-sidenav>

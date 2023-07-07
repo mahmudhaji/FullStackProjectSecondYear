@@ -21,14 +21,14 @@ export class DashboardComponent implements OnInit {
   }
   formControl (){
     this.addform=new FormGroup({
-      FName:new FormControl(null,[Validators.required]),
-      MName:new FormControl(null,[Validators.required]),
-      LName:new FormControl(null,[Validators.required]),
+      fname:new FormControl(null,[Validators.required]),
+      mname:new FormControl(null,[Validators.required]),
+      lname:new FormControl(null,[Validators.required]),
       // Age:new FormControl(null,[Validators.required]),
-      LicenceNumber:new FormControl(null,[Validators.required]),
-      CourtName:new FormControl(null,[Validators.required]),
-      CarPlateNumber:new FormControl(null,[Validators.required]),
-      CasesName:new FormControl(null,[Validators.required])
+      licenceNumber:new FormControl(null,[Validators.required]),
+      courtname:new FormControl(null,[Validators.required]),
+      carplatenumber:new FormControl(null,[Validators.required]),
+      casesname:new FormControl(null,[Validators.required])
 
     })
   }

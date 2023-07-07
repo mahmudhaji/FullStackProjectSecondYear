@@ -6,10 +6,17 @@ import { LogoutComponent } from './pages/logout/logout.component';
 import { MainlayoutComponent } from './layout/mainlayout/mainlayout.component';
 import { CasesComponent } from './pages/cases/cases.component';
 import { CourtComponent } from './pages/court/court.component';
+import { UpdateComponent } from './pages/update/update.component';
+import { LoginComponent } from './pages/login/login.component';
 
 
 const routes: Routes = [
-  {path:"",
+  
+  {
+    path:"",component:LoginComponent
+  },
+  {
+    path:"mainlayout",
   component:MainlayoutComponent,
   children:[
     {
@@ -31,6 +38,11 @@ const routes: Routes = [
   {
     path:"logout",
     component:LogoutComponent
+  },
+
+  {
+    path:"update/:licenceNumber",
+    component:UpdateComponent
   },
 ]
 
